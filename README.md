@@ -1,3 +1,10 @@
-# Running this project
+# VPRO pages
 
-Run the project with `node:16` and `npm:8`
+## Prerequisites
+
+- Node v16.10.x
+- npm v8.x.x
+
+## Running this project
+
+`npm run start`
