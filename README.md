@@ -5,6 +5,6 @@
 - Node v16.10.x
 - npm v8.x.x
 
-## Running this project
+## Start the website
 
 `npm run start`
