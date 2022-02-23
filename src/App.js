@@ -10,17 +10,33 @@ const Wrapper = styled.div`
 `;
 
 const Container = styled.div`
-  max-width: 1200px;
-  width: 100%;
+  width: 1000px;
+  max-width: 100%;
   height: 100%;
   background-color: #fff;
   margin: auto;
 `;
 
+const Section = styled.section`
+  width: 100%;
+  height: 400px;
+`;
+
+const Spacer = styled.div`
+  height: 24px;
+  background-color: lightgray;
+`;
+
 function App() {
   return (
     <Wrapper>
-      <Container />
+      <Container>
+        <Section />
+        <Spacer />
+        <Section />
+        <Spacer />
+        <Section />
+      </Container>
     </Wrapper>
   );
 }
