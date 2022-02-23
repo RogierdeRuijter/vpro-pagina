@@ -15,13 +15,14 @@ const Container = styled.div`
   height: 100%;
   background-color: #fff;
   margin: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-top: 0.5rem;
 `;
 
 const Section = styled.section`
   width: 100%;
   height: 400px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 `;
 
 const VideosContainer = styled(Section)`
@@ -40,6 +41,10 @@ const VideoGrid = styled.div`
 const Video = styled.article`
   background-color: gray;
   aspect-ratio: 16/9;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const Spacer = styled.div`
@@ -55,6 +60,7 @@ function App() {
           <header>Tips voor vandaag</header>
           <VideoGrid>
             <Video>
+              <aside>15 min</aside>
               <header>title</header>
             </Video>
             <Video>
