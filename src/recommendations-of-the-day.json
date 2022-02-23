@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "title": "Danny's wereld: Terrorist zonder vaderland",
+      "img": "https://images.poms.omroep.nl/image/s325x216%5E/c325x216%3E/1673214.jpg",
+      "additionalInfo": "kijk op NPO Start (15 min.)"
+    },
+    {
+      "title": "Afghanistan: The Wounded Land",
+      "img": "https://www.vpro.nl/.imaging/mte/vpronl/vtkteaser-col-3-1/dam/vpronl/over-de-vpro/instagram/avondshow-linkinbio.jpg/jcr:content/avondshow%2520linkinbio.jpg%22",
+      "additionalInfo": "Kijk de hele serie op NPO Start"
+    },
+    {
+      "title": "Tegenlicht: Goed geld verdienen",
+      "img": "https://www.vpro.nl//.imaging/mte/vpronl/vtkteaser-col-3-1/dam/vpronl/programmas/n/nooit-meer-slapen/2022--januari-februari/Rocky-Hekakaija--c--Koen-van-Weel_-ANP.png/jcr:content/Rocky%2520Hekakaija%2520(c)%2520Koen%2520van%2520Weel_%2520ANP.png",
+      "additionalInfo": "kijk online (45 min)"
+    },
+    {
+      "title": "Twintig jaar na 9/11: hoe het jihadisme zich ontwikkeld heeft",
+      "img": "https://www.vpro.nl//.imaging/mte/vpronl/vtkteaser-col-3-1/dam/vpronl/programmas/s/sander-en-de-kloof/columns/Illustraties---columns---sander/column-6.png/jcr:content/column%25206.png",
+      "additionalInfo": "Bureau Buitenland"
+    },
+    {
+      "title": "Aanstormend Nederlands filmtalent in Badlands",
+      "img": "https://www.vpro.nl/.imaging/mte/vpronl/vtkteaser-col-3-1/dam/vpronl/programmas/t/tegenlicht/2022/Artikelen/EU-wetgeving/EU-wetten-bouwen.png/jcr:content/EU-wetten-kwali.png",
+      "cinema": true
+    },
+    {
+      "title": "Vergeet verhalen met Bram Vermeulen",
+      "img": "https://www.vpro.nl/.imaging/mte/vpronl/vtkteaser-col-3-1/dam/vpronl/programmas/a/argos/2022/windmolen-2.jpg/jcr:content/windmolen%25202.jpg",
+      "additionalInfo": "Frontlinie"
+    }
+  ]
+}
