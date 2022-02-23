@@ -8,8 +8,21 @@ const Wrapper = styled.div`
   /* TODO: add spacing file */
   padding: 16px;
 `;
+
+const Container = styled.div`
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  margin: auto;
+`;
+
 function App() {
-  return <Wrapper />;
+  return (
+    <Wrapper>
+      <Container />
+    </Wrapper>
+  );
 }
 
 export default App;
