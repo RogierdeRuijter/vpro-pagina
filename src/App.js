@@ -6,21 +6,37 @@ const Wrapper = styled.div`
   /* TODO: add color file */
   background-color: orange;
   /* TODO: add spacing file */
-  padding: 16px;
+  padding: 1rem;
 `;
 
 const Container = styled.div`
-  max-width: 1200px;
-  width: 100%;
+  width: 1000px;
+  max-width: 100%;
   height: 100%;
   background-color: #fff;
   margin: auto;
 `;
 
+const Section = styled.section`
+  width: 100%;
+  height: 400px;
+`;
+
+const Spacer = styled.div`
+  height: 1.5rem;
+  background-color: lightgray;
+`;
+
 function App() {
   return (
     <Wrapper>
-      <Container />
+      <Container>
+        <Section />
+        <Spacer />
+        <Section />
+        <Spacer />
+        <Section />
+      </Container>
     </Wrapper>
   );
 }
