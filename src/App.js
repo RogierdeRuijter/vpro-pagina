@@ -38,7 +38,7 @@ const VideoGrid = styled.div`
   row-gap: 1rem;
   margin-top: 0.5rem;
 `;
-
+// TODO: move this to componented and add cinema style
 const Video = styled.article`
   background-color: gray;
   aspect-ratio: 16/9;
