@@ -32,7 +32,7 @@ const VideosContainer = styled(Section)`
 
 const VideoGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   column-gap: 1rem;
   row-gap: 1rem;
   margin-top: 0.5rem;
