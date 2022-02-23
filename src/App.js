@@ -39,7 +39,7 @@ const VideoGrid = styled.div`
 
 const Video = styled.article`
   background-color: gray;
-  aspect-ratio: 4/3;
+  aspect-ratio: 16/9;
 `;
 
 const Spacer = styled.div`
