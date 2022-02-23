@@ -15,11 +15,31 @@ const Container = styled.div`
   height: 100%;
   background-color: #fff;
   margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 `;
 
 const Section = styled.section`
   width: 100%;
   height: 400px;
+`;
+
+const VideosContainer = styled(Section)`
+  height: auto;
+  padding-bottom: 1rem;
+`;
+
+const VideoGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  column-gap: 1rem;
+  row-gap: 1rem;
+  margin-top: 0.5rem;
+`;
+
+const Video = styled.article`
+  background-color: gray;
+  aspect-ratio: 4/3;
 `;
 
 const Spacer = styled.div`
@@ -31,7 +51,29 @@ function App() {
   return (
     <Wrapper>
       <Container>
-        <Section />
+        <VideosContainer>
+          <header>Tips voor vandaag</header>
+          <VideoGrid>
+            <Video>
+              <header>title</header>
+            </Video>
+            <Video>
+              <header>title</header>
+            </Video>
+            <Video>
+              <header>title</header>
+            </Video>
+            <Video>
+              <header>title</header>
+            </Video>
+            <Video>
+              <header>title</header>
+            </Video>
+            <Video>
+              <header>title</header>
+            </Video>
+          </VideoGrid>
+        </VideosContainer>
         <Spacer />
         <Section />
         <Spacer />
