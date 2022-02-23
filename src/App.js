@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   /* TODO: add color file */
   background-color: orange;
   /* TODO: add spacing file */
-  padding: 16px;
+  padding: 1rem;
 `;
 
 const Container = styled.div`
@@ -23,7 +23,7 @@ const Section = styled.section`
 `;
 
 const Spacer = styled.div`
-  height: 24px;
+  height: 1.5rem;
   background-color: lightgray;
 `;
 
