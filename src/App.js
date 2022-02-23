@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import recommendationsOfTheDayResponse from "./recommendations-of-the-day.json";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -45,12 +46,16 @@ const Video = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-image: url(${(props) => props.backgroundImg});
+  background-size: contain;
 `;
 
 const Spacer = styled.div`
   height: 1.5rem;
   background-color: lightgray;
 `;
+
+const recommendationsOfTheDay = recommendationsOfTheDayResponse.items;
 
 function App() {
   return (
@@ -59,8 +64,14 @@ function App() {
         <VideosContainer>
           <header>Tips voor vandaag</header>
           <VideoGrid>
-            <Video>
-              <aside>15 min</aside>
+            {recommendationsOfTheDay.map((recommendation) => (
+              <Video backgroundImg={recommendation.img}>
+                <aside>{recommendation.additionalInfo}</aside>
+                <header>{recommendation.title}</header>
+              </Video>
+            ))}
+
+            {/* <Video>
               <header>title</header>
             </Video>
             <Video>
@@ -74,10 +85,7 @@ function App() {
             </Video>
             <Video>
               <header>title</header>
-            </Video>
-            <Video>
-              <header>title</header>
-            </Video>
+            </Video> */}
           </VideoGrid>
         </VideosContainer>
         <Spacer />
