@@ -1,5 +1,10 @@
+import styled from "styled-components";
+
+const Container = styled.div`
+  width: 100%;
+`;
 function App() {
-  return <div />;
+  return <Container />;
 }
 
 export default App;
