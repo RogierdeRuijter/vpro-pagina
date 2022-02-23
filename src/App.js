@@ -70,22 +70,6 @@ function App() {
                 <header>{recommendation.title}</header>
               </Video>
             ))}
-
-            {/* <Video>
-              <header>title</header>
-            </Video>
-            <Video>
-              <header>title</header>
-            </Video>
-            <Video>
-              <header>title</header>
-            </Video>
-            <Video>
-              <header>title</header>
-            </Video>
-            <Video>
-              <header>title</header>
-            </Video> */}
           </VideoGrid>
         </VideosContainer>
         <Spacer />
