@@ -4,6 +4,7 @@
 
 - Node v16.10.x
 - npm v8.x.x
+- Run `npm install` in root folder
 
 ## Start the website
 
