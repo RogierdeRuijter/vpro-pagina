@@ -45,10 +45,11 @@ const Spacer = styled.div`
 `;
 
 const TvSeriesContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   position: relative;
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  column-gap: 1rem;
+  row-gap: 1rem;
   color: #fff;
   padding-bottom: 1rem;
   font-weight: 800;
