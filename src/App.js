@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import recommendationsOfTheDayResponse from "./assets/recommendations-of-the-day.json";
+import tvSeriesResponse from "./assets/tv-series.json";
 import AboutSection from "./components/AboutSection";
 import Section from "./components/Section";
 
@@ -53,7 +54,29 @@ const Spacer = styled.div`
   background-color: gray;
 `;
 
+const TvSeriesContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  gap: 1rem;
+  color: #fff;
+  padding-bottom: 1rem;
+`;
+
+const TvSerie = styled.article`
+  width: calc(50% - 0.5rem);
+  background-image: url(${(props) => props.backgroundImg});
+  aspect-ratio: 500/216;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 1rem;
+  padding-right: 1rem;
+`;
+
 const recommendationsOfTheDay = recommendationsOfTheDayResponse.items;
+const tvSeries = tvSeriesResponse.items;
 
 function App() {
   return (
@@ -74,6 +97,15 @@ function App() {
         <Section>
           <header>
             <h4>Afleveringen</h4>
+            <TvSeriesContainer>
+              {tvSeries.map((tvSerie) => (
+                <TvSerie backgroundImg={tvSerie.img}>
+                  <header>
+                    <h5>{tvSerie.title}</h5>
+                  </header>
+                </TvSerie>
+              ))}
+            </TvSeriesContainer>
           </header>
         </Section>
         <Spacer />
