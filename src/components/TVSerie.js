@@ -22,7 +22,7 @@ const IconContainer = styled.div`
   height: 24px;
   top: 0;
   right 0;
-  background-color: lightgray;
+  background-color:rgba(255,255,255,0.5);
   display: flex;
   align-items: center;
   justify-content: center;
