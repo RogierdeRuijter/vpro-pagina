@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import recommendationsOfTheDayResponse from "./assets/recommendations-of-the-day.json";
+import tvSeriesResponse from "./assets/tv-series.json";
 import AboutSection from "./components/AboutSection";
 import Section from "./components/Section";
 
@@ -21,12 +22,12 @@ const Container = styled.div`
   padding-top: 0.5rem;
 `;
 
-const VideosContainer = styled(Section)`
+const ArticleContainer = styled(Section)`
   height: auto;
   padding-bottom: 1rem;
 `;
 
-const VideoGrid = styled.div`
+const AricleGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   column-gap: 1rem;
@@ -35,7 +36,7 @@ const VideoGrid = styled.div`
   color: #fff;
 `;
 // TODO: move this to componented and add cinema style
-const Video = styled.article`
+const Article = styled.article`
   background-color: gray;
   aspect-ratio: 325/216;
   padding: 1rem;
@@ -53,27 +54,60 @@ const Spacer = styled.div`
   background-color: gray;
 `;
 
+const TvSeriesContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  gap: 1rem;
+  color: #fff;
+  padding-bottom: 1rem;
+`;
+
+const TvSerie = styled.article`
+  width: calc(50% - 0.5rem);
+  background-image: url(${(props) => props.backgroundImg});
+  aspect-ratio: 500/216;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 1rem;
+  padding-right: 1rem;
+`;
+
 const recommendationsOfTheDay = recommendationsOfTheDayResponse.items;
+const tvSeries = tvSeriesResponse.items;
 
 function App() {
   return (
     <Wrapper>
       <Container>
-        <VideosContainer>
-          <header>
-            <h4>Tips voor vandaag</h4>
-          </header>
-          <VideoGrid>
+        <ArticleContainer>
+          <header>Tips voor vandaag</header>
+          <AricleGrid>
             {recommendationsOfTheDay.map((recommendation) => (
-              <Video backgroundImg={recommendation.img}>
+              <Article backgroundImg={recommendation.img}>
                 <aside>{recommendation.additionalInfo}</aside>
                 <header>{recommendation.title}</header>
-              </Video>
+              </Article>
             ))}
-          </VideoGrid>
-        </VideosContainer>
+          </AricleGrid>
+        </ArticleContainer>
         <Spacer />
-        <Section />
+        <Section>
+          <header>
+            <h4>Afleveringen</h4>
+            <TvSeriesContainer>
+              {tvSeries.map((tvSerie) => (
+                <TvSerie backgroundImg={tvSerie.img}>
+                  <header>
+                    <h5>{tvSerie.title}</h5>
+                  </header>
+                </TvSerie>
+              ))}
+            </TvSeriesContainer>
+          </header>
+        </Section>
         <Spacer />
         <AboutSection />
       </Container>
