@@ -41,13 +41,15 @@ const VideoGrid = styled.div`
 // TODO: move this to componented and add cinema style
 const Video = styled.article`
   background-color: gray;
-  aspect-ratio: 16/9;
+  aspect-ratio: 325/216;
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-image: url(${(props) => props.backgroundImg});
   background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
 `;
 
 const Spacer = styled.div`
@@ -62,7 +64,7 @@ function App() {
     <Wrapper>
       <Container>
         <VideosContainer>
-          <header>Tips voor vandaag</header>
+          <header style={{ color: "black" }}>Tips voor vandaag</header>
           <VideoGrid>
             {recommendationsOfTheDay.map((recommendation) => (
               <Video backgroundImg={recommendation.img}>
