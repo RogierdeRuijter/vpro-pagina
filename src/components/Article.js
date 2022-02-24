@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import ArticleIcon from "./ArticleIcon";
 
 const Container = styled.article`
   background-color: gray;
@@ -36,6 +37,7 @@ function Article({ recommendation }) {
     >
       {recommendation.cinema && <VideoBanner>VPRO Cinema</VideoBanner>}
       {!recommendation.cinema && <aside>{recommendation.additionalInfo}</aside>}
+      {!recommendation.cinema && <ArticleIcon type={recommendation.type} />}
       <header>{recommendation.title}</header>
     </Container>
   );
@@ -47,6 +49,7 @@ Article.propTypes = {
     title: PropTypes.string.isRequired,
     additionalInfo: PropTypes.string,
     cinema: PropTypes.bool,
+    type: PropTypes.string,
   }).isRequired,
 };
 
