@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import recommendationsOfTheDayResponse from "./assets/recommendations-of-the-day.json";
+import AboutSection from "./components/AboutSection";
+import Section from "./components/Section";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -19,13 +21,6 @@ const Container = styled.div`
   padding-top: 0.5rem;
 `;
 
-const Section = styled.section`
-  width: 100%;
-  height: 400px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-`;
-
 const ArticleContainer = styled(Section)`
   height: auto;
   padding-bottom: 1rem;
@@ -37,6 +32,7 @@ const AricleGrid = styled.div`
   column-gap: 1rem;
   row-gap: 1rem;
   margin-top: 0.5rem;
+  color: #fff;
 `;
 // TODO: move this to componented and add cinema style
 const Article = styled.article`
@@ -54,7 +50,7 @@ const Article = styled.article`
 
 const Spacer = styled.div`
   height: 1.5rem;
-  background-color: lightgray;
+  background-color: gray;
 `;
 
 const recommendationsOfTheDay = recommendationsOfTheDayResponse.items;
@@ -64,7 +60,7 @@ function App() {
     <Wrapper>
       <Container>
         <ArticleContainer>
-          <header style={{ color: "black" }}>Tips voor vandaag</header>
+          <header>Tips voor vandaag</header>
           <AricleGrid>
             {recommendationsOfTheDay.map((recommendation) => (
               <Article backgroundImg={recommendation.img}>
@@ -81,7 +77,7 @@ function App() {
           </header>
         </Section>
         <Spacer />
-        <Section />
+        <AboutSection />
       </Container>
     </Wrapper>
   );
