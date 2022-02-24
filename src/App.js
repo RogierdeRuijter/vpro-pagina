@@ -36,6 +36,7 @@ const AricleGrid = styled.div`
   row-gap: 1rem;
   margin-top: 0.5rem;
   color: #fff;
+  font-weight: 800;
 `;
 
 const Spacer = styled.div`
@@ -50,6 +51,11 @@ const TvSeriesContainer = styled.div`
   gap: 1rem;
   color: #fff;
   padding-bottom: 1rem;
+  font-weight: 800;
+`;
+
+const ArticleContainerTitle = styled.h4`
+  color: blue;
 `;
 
 const recommendationsOfTheDay = recommendationsOfTheDayResponse.items;
@@ -60,7 +66,9 @@ function App() {
     <Wrapper>
       <Container>
         <ArticleContainer>
-          <header>Tips voor vandaag</header>
+          <header>
+            <ArticleContainerTitle>Tips voor vandaag</ArticleContainerTitle>
+          </header>
           <AricleGrid>
             {recommendationsOfTheDay.map((recommendation) => (
               <Article recommendation={recommendation} />
@@ -70,13 +78,13 @@ function App() {
         <Spacer />
         <Section>
           <header>
-            <h4>Afleveringen</h4>
-            <TvSeriesContainer>
-              {tvSeries.map((tvSerie) => (
-                <TVSerie tvSerie={tvSerie} />
-              ))}
-            </TvSeriesContainer>
+            <h3>Afleveringen</h3>
           </header>
+          <TvSeriesContainer>
+            {tvSeries.map((tvSerie) => (
+              <TVSerie tvSerie={tvSerie} />
+            ))}
+          </TvSeriesContainer>
         </Section>
         <Spacer />
         <AboutSection />
