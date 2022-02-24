@@ -2,7 +2,6 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const Container = styled.article`
-  width: calc(50% - 0.5rem);
   background-image: url(${(props) => props.backgroundImg});
   aspect-ratio: 500/216;
   background-color: gray;
@@ -13,6 +12,8 @@ const Container = styled.article`
   padding-right: 1rem;
   padding-bottom: 1rem;
   position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
 `;
 
 const IconContainer = styled.div`

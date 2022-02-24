@@ -29,6 +29,7 @@ const VideoBanner = styled.div`
   padding-left: 5%;
 `;
 
+// TODO: Align VPRO Cinema text with other header text
 function Article({ recommendation }) {
   return (
     <Container
