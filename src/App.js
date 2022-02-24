@@ -3,6 +3,7 @@ import recommendationsOfTheDayResponse from "./assets/recommendations-of-the-day
 import tvSeriesResponse from "./assets/tv-series.json";
 import AboutSection from "./components/AboutSection";
 import Section from "./components/Section";
+import Article from "./components/Article";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -34,19 +35,6 @@ const AricleGrid = styled.div`
   row-gap: 1rem;
   margin-top: 0.5rem;
   color: #fff;
-`;
-// TODO: move this to componented and add cinema style
-const Article = styled.article`
-  background-color: gray;
-  aspect-ratio: 325/216;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-image: url(${(props) => props.backgroundImg});
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
 `;
 
 const Spacer = styled.div`
@@ -86,10 +74,7 @@ function App() {
           <header>Tips voor vandaag</header>
           <AricleGrid>
             {recommendationsOfTheDay.map((recommendation) => (
-              <Article backgroundImg={recommendation.img}>
-                <aside>{recommendation.additionalInfo}</aside>
-                <header>{recommendation.title}</header>
-              </Article>
+              <Article recommendation={recommendation} />
             ))}
           </AricleGrid>
         </ArticleContainer>
