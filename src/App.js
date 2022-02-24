@@ -41,7 +41,7 @@ const AricleGrid = styled.div`
 
 const Spacer = styled.div`
   height: 1.5rem;
-  background-color: gray;
+  background-color: #b8b8b8;
 `;
 
 const TvSeriesContainer = styled.div`
