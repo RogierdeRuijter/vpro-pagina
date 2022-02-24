@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import recommendationsOfTheDayResponse from "./recommendations-of-the-day.json";
+import recommendationsOfTheDayResponse from "./assets/recommendations-of-the-day.json";
 
 const Wrapper = styled.div`
   width: 100%;
