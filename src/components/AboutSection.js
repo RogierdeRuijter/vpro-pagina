@@ -55,7 +55,7 @@ function AboutSection() {
           </Arrow>
           <ReadMore>Lees verder</ReadMore>
         </ReadMoreContainer>
-
+        {/* TODO: add dropdown animation */}
         <AdditionalInfoContainer>
           {show && (
             <>
