@@ -4,6 +4,7 @@ import tvSeriesResponse from "./assets/tv-series.json";
 import AboutSection from "./components/AboutSection";
 import Section from "./components/Section";
 import Article from "./components/Article";
+import TVSerie from "./components/TVSerie";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -51,18 +52,6 @@ const TvSeriesContainer = styled.div`
   padding-bottom: 1rem;
 `;
 
-const TvSerie = styled.article`
-  width: calc(50% - 0.5rem);
-  background-image: url(${(props) => props.backgroundImg});
-  aspect-ratio: 500/216;
-  background-color: gray;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding-left: 1rem;
-  padding-right: 1rem;
-`;
-
 const recommendationsOfTheDay = recommendationsOfTheDayResponse.items;
 const tvSeries = tvSeriesResponse.items;
 
@@ -84,11 +73,7 @@ function App() {
             <h4>Afleveringen</h4>
             <TvSeriesContainer>
               {tvSeries.map((tvSerie) => (
-                <TvSerie backgroundImg={tvSerie.img}>
-                  <header>
-                    <h5>{tvSerie.title}</h5>
-                  </header>
-                </TvSerie>
+                <TVSerie tvSerie={tvSerie} />
               ))}
             </TvSeriesContainer>
           </header>
