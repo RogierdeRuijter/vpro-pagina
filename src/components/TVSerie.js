@@ -14,6 +14,7 @@ const Container = styled.article`
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
+  cursor: pointer;
 `;
 
 const IconContainer = styled.div`
