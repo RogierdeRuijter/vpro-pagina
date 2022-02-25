@@ -39,9 +39,30 @@ const AricleGrid = styled.div`
   font-weight: 800;
 `;
 
+const Triangle = styled.div`
+  display: inline-block;
+
+  border-left: 20px solid #b8b8b8;
+  border-right: 20px solid orange;
+  border-bottom: 12px solid orange;
+  border-top: 12px solid #b8b8b8;
+`;
+
+const TriangleReverse = styled.div`
+  display: inline-block;
+
+  border-left: 20px solid orange;
+  border-right: 20px solid #b8b8b8;
+  border-bottom: 12px solid orange;
+  border-top: 12px solid #b8b8b8;
+`;
+
 const Spacer = styled.div`
+  display: inline-block;
   height: 1.5rem;
   background-color: #b8b8b8;
+  width: calc(100% - 80px);
+  position: relative;
 `;
 
 const TvSeriesContainer = styled.div`
@@ -76,7 +97,9 @@ function App() {
             ))}
           </AricleGrid>
         </ArticleContainer>
+        <TriangleReverse />
         <Spacer />
+        <Triangle />
         <Section>
           <header>
             <h3>Afleveringen</h3>
